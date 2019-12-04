@@ -36,23 +36,31 @@
         var computerChoice =
           computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-          if (userGuess === 'r' || userGuess === 'p' || userGuess === 's') {
-          if (userGuess === 'r' && computerGuess === 's') {
+        if (userChoice === 'r' || userChoice === 'p' || userChoice === 's') {
+          if (userChoice === 'r' && computerChoice === 's') {
             wins++;
-          } else if (userGuess === 'r' && computerGuess === 'p') {
+          } else if (userChoice === 'r' && computerChoice === 'p') {
             losses++;
-          } else if (userGuess === 's' && computerGuess === 'r') {
+          } else if (userChoice === 's' && computerChoice === 'r') {
             losses++;
-          } else if (userGuess === 's' && computerGuess === 'p') {
+          } else if (userChoice === 's' && computerChoice === 'p') {
             wins++;
-          } else if (userGuess === 'p' && computerGuess === 'r') {
+          } else if (userChoice === 'p' && computerChoice === 'r') {
             wins++;
-          } else if (userGuess === 'p' && computerGuess === 's') {
+          } else if (userChoice === 'p' && computerChoice === 's') {
             losses++;
-          } else if (userGuess === computerGuess) {
+          } else if (userChoice === computerChoice) {
             ties++;
           }
 
+          gameDirectionsDiv.textContent = '';
+          humanScorePlaceHolderDiv.textContent = 'You chose: ' + userChoice;
+          computerScorePlaceHolderDiv.textContent =
+            'The computer chose: ' + computerChoice;
+          humanWinsDiv.textContent = 'wins: ' + wins;
+          computerWinsDiv.textContent = 'losses: ' + losses;
+          tiesDiv.textContent = 'ties: ' + ties;
+        }
       };
     </script>
   </body>
