@@ -30,6 +30,10 @@
       var humanWinsDiv = document.getElementById('HumanScore');
       var computerWinsDiv = document.getElementById('ComputerScore');
       var tiesDiv = document.getElementById('timesTied');
+
+      document.onkeyup = function(event) {
+        var userChoice = event.key;
+      };
     </script>
   </body>
 </html>
