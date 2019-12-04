@@ -9,7 +9,7 @@
     <div id="game">
       <p id="directions">Press P , s , or r to get started</p>
       <p id="HumanGuess">Your Pick:</p>
-      <p id="Computer Guess">Computers Pick:</p>
+      <p id="ComputerGuess">Computers Pick:</p>
       <p id="HumanScore">Your Score:</p>
       <p id="ComputerScore">Computer Score:</p>
       <p id="timesTied">Number of ties:</p>
@@ -21,6 +21,15 @@
       var wins = 0;
       var losses = 0;
       var ties = 0;
+
+      var gameDirectionsDiv = document.getElementById('directions');
+      var humanScorePlaceHolderDiv = document.getElementById('HumanGuess');
+      var computerScorePlaceHolderDiv = document.getElementById(
+        'ComputerGuess'
+      );
+      var humanWinsDiv = document.getElementById('HumanScore');
+      var computerWinsDiv = document.getElementById('ComputerScore');
+      var tiesDiv = document.getElementById('timesTied');
     </script>
   </body>
 </html>
