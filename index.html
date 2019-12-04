@@ -16,7 +16,7 @@
     </div>
 
     <script type="text/javascript">
-      var computerChoice = ['p', 's', 'r'];
+      var computerChoices = ['p', 's', 'r'];
 
       var wins = 0;
       var losses = 0;
@@ -33,6 +33,8 @@
 
       document.onkeyup = function(event) {
         var userChoice = event.key;
+        var computerChoice =
+          computerChoices[Math.floor(Math.random() * computerChoices.length)];
       };
     </script>
   </body>
